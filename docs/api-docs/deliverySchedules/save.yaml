@@ -1,0 +1,29 @@
+/delivery/:
+    put:
+        tags:
+            - Delivery Schedules
+        description:
+             Create / update Delivery Schedules Account
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:                                                  
+                            suppliers:
+                                type: object
+                                properties:
+                                    id: 
+                                        type: number
+                                        example : 1
+                             
+                                
+                            
+
+                            
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

@@ -1,0 +1,14 @@
+/delivery/{id}:
+  get:
+    tags:
+      - Delivery Schedules
+    description:
+        Get a Delivery Schedule
+    parameters:
+      - name: id
+        in: path
+        required: true
+        type: number
+    responses:
+        200:
+            description: "status:1 is success; status: 0 is failure;"

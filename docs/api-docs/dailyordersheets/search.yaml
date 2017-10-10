@@ -1,0 +1,28 @@
+/daily/:
+    post:
+        tags:
+            - DailyOrderSheets
+        description:
+                Get all Daily Order Sheets 
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            suppliers:
+                                type: object
+                                properties:
+                                    id:
+                                        type: number
+                                        example: "null or supplier id" 
+                            order_date:
+                                type: date
+                                example: "2017-10-01 00:00:00"
+                            
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

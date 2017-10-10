@@ -1,0 +1,51 @@
+/billing/:
+    put:
+        tags:
+            - User Billings
+        description:
+             Create User billing
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: number
+                                example: null
+                            billed_date:
+                                type: date
+                                example: "1000-01-01 00:00:00"  
+                            suppliers:
+                                type: object
+                                properties: 
+                                   id: 
+                                     type: number
+                                     example : 1      
+                            product_skus:
+                                type: object
+                                properties: 
+                                   id: 
+                                     type: number
+                                     example : 1
+                            day_price:
+                                type: number
+                                example: 23
+                            total_price:
+                                type: number
+                                example: 120
+                            user_dwellings:
+                                type: object
+                                properties: 
+                                   id: 
+                                     type: number
+                                     example : 1 
+                            
+                            
+                            
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"
